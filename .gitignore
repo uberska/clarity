@@ -11,3 +11,14 @@
 *.lai
 *.la
 *.a
+
+# Logs
+/logs/
+
+# Build Files
+/build/debug/
+/build/release/
+
+# Crash files
+*.exe.stackdump
+

@@ -1,0 +1,34 @@
+- fix bug with window not redrawing correctly on first show
+
+- figure out whether to add option of SAME chunks to the diff model
+-- tradeoff of algorithm complexity vs space
+
+- figure out how to deal with newlines in StringList
+
+- figure out how to properly diff ending newline
+
+- fix bug where last line doesn't show up if it's a SAME; may go away if we add SAME chunks to the diff
+
+- make window sane size on open
+
+- move things into own files (cpp/h); one class set per file
+
+- implement tests
+
+- implement inter-line diffing with diff match patch
+
+- look into const correctness
+
+- deal with duplicate getLineList functions
+
+- remove commented out code
+
+- fix todos
+
+- fix compiler warnings
+
+- alphabetize imports
+
+- deal with lineList vs lineDeque naming
+
+- check for pragma once in h files

@@ -1,0 +1,27 @@
+this is the start line that is the same
+
+string in
+ diff
+this is the same
+this is not the same
+
+temp
+
+this line is REMOVED
+int main(int argc, char** argv) {
+    if (foo) {
+        blah();
+    }
+
+    doSomething1();
+
+    if (bar) {
+        bam();
+    }
+
+    doSomething2();
+
+    return EXIT_SUCCESS;
+}
+
+this is a final line that is the same
