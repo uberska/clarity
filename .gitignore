@@ -17,6 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -25,10 +26,15 @@ DerivedData
 #
 # Pods/
 
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
 Carthage/Build
+
+
+# Misc
+.DS_Store
 
