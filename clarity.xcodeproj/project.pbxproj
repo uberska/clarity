@@ -77,6 +77,7 @@
 				9992DB761ADADDE3001B64DF /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		9992DB761ADADDE3001B64DF /* Products */ = {
 			isa = PBXGroup;
