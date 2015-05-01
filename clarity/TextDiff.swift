@@ -8,6 +8,7 @@
 
 
 import Cocoa
+import DiffMatchPatch
 import Foundation
 
 
@@ -309,15 +310,47 @@ func updateFromModelUnified(textView: NSTextView, model: TextDiffModel) {
             case .Added:
                 addTextViewUnifiedChunk(textView, twoContents, chunk.twoRange, DiffColors.addedBackground)
             case .Modified:
-                addTextViewUnifiedChunk(textView, oneContents, chunk.oneRange, DiffColors.modifiedOneBackground)
-                addTextViewUnifiedChunk(textView, twoContents, chunk.twoRange, DiffColors.modifiedTwoBackground)
+				let oneStr = "\n".join(oneContents[chunk.oneRange]) + "\n"
+				let twoStr = "\n".join(twoContents[chunk.twoRange]) + "\n"
+				
+				let diffMatchPatch = DiffMatchPatch()
+				let diffs: NSMutableArray! = diffMatchPatch.diff_mainOfOldString(oneStr, andNewString: twoStr)
+
+				addTextViewUnifiedChunkDiff(textView, diffs, DiffColors.modifiedOneBackground, DiffColors.removedBackground, DIFF_INSERT)
+                addTextViewUnifiedChunkDiff(textView, diffs, DiffColors.modifiedTwoBackground, DiffColors.addedBackground, DIFF_DELETE)
             }
         }
     }
-    
-    
-    
+	
+
     // TODO: move the cursor to the beginning of the file
+}
+
+
+func addTextViewUnifiedChunkDiff(textView: NSTextView, diffs: NSMutableArray, sameColor: NSColor, differentColor: NSColor, skipOperation: Operation) {
+	for diff in diffs {
+		let diffOperation: Operation = diff.operation!
+		if diffOperation != skipOperation {
+			if diffOperation == DIFF_INSERT || diffOperation == DIFF_DELETE {
+				textView.append(diff.text, backgroundColor: differentColor)
+			} else if diffOperation == DIFF_EQUAL {
+				textView.append(diff.text, backgroundColor: sameColor)
+			}
+		}
+	}
+}
+
+
+public func ==(lhs: Operation, rhs: Operation) -> Bool {
+	var leftValue: UInt32 = unsafeBitCast(lhs, UInt32.self)
+	var rightValue: UInt32 = unsafeBitCast(rhs, UInt32.self)
+	
+	return leftValue == rightValue
+}
+
+
+public func !=(lhs: Operation, rhs: Operation) -> Bool {
+	return !(lhs == rhs)
 }
 
 

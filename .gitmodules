@@ -1,0 +1,3 @@
+[submodule "External/google-diff-match-patch-Objective-C"]
+	path = External/google-diff-match-patch-Objective-C
+	url = git@github.com:JanX2/google-diff-match-patch-Objective-C.git

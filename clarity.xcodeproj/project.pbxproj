@@ -20,6 +20,7 @@
 		9992DB9C1ADF4456001B64DF /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992DB9B1ADF4456001B64DF /* Command.swift */; };
 		9992DB9E1ADF4EF2001B64DF /* TextDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992DB9D1ADF4EF2001B64DF /* TextDiff.swift */; };
 		9992DBA01AE1DE5A001B64DF /* DiffColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992DB9F1AE1DE5A001B64DF /* DiffColors.swift */; };
+		99CB91F61AF2F3A000D6BFAF /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CB91EB1AF2F2F700D6BFAF /* DiffMatchPatch.framework */; };
 		99FCAE491AE8602E001150C1 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FCAE481AE8602E001150C1 /* Diffable.swift */; };
 		99FCAE4A1AE8616E001150C1 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FCAE481AE8602E001150C1 /* Diffable.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9992DB741ADADDE3001B64DF;
 			remoteInfo = clarity;
+		};
+		99CB91EA1AF2F2F700D6BFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = DiffMatchPatch;
+		};
+		99CB91EC1AF2F2F700D6BFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D5BC0AF128CA8E200B8F5FF;
+			remoteInfo = DiffMatchPatchTest;
+		};
+		99CB91EE1AF2F2F700D6BFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D96F3A212AFC68900C3E5C0;
+			remoteInfo = speedtest;
+		};
+		99CB91F01AF2F2F700D6BFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D03488E135F75460051FE16;
+			remoteInfo = "mode-test";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,6 +77,8 @@
 		9992DB9B1ADF4456001B64DF /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		9992DB9D1ADF4EF2001B64DF /* TextDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDiff.swift; sourceTree = "<group>"; };
 		9992DB9F1AE1DE5A001B64DF /* DiffColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffColors.swift; sourceTree = "<group>"; };
+		99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffMatchPatch.xcodeproj; path = "External/google-diff-match-patch-Objective-C/DiffMatchPatch.xcodeproj"; sourceTree = "<group>"; };
+		99CB91F31AF2F36C00D6BFAF /* clarity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clarity-Bridging-Header.h"; sourceTree = "<group>"; };
 		99FCAE481AE8602E001150C1 /* Diffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CB91F61AF2F3A000D6BFAF /* DiffMatchPatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +107,7 @@
 				9992DB771ADADDE3001B64DF /* clarity */,
 				9992DB881ADADDE3001B64DF /* clarityTests */,
 				9992DB761ADADDE3001B64DF /* Products */,
+				99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -101,6 +134,7 @@
 				9992DB7C1ADADDE3001B64DF /* Images.xcassets */,
 				9992DB7E1ADADDE3001B64DF /* MainMenu.xib */,
 				9992DB781ADADDE3001B64DF /* Supporting Files */,
+				99CB91F31AF2F36C00D6BFAF /* clarity-Bridging-Header.h */,
 			);
 			path = clarity;
 			sourceTree = "<group>";
@@ -128,6 +162,17 @@
 				9992DB8A1ADADDE3001B64DF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99CB91E41AF2F2F700D6BFAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99CB91EB1AF2F2F700D6BFAF /* DiffMatchPatch.framework */,
+				99CB91ED1AF2F2F700D6BFAF /* DiffMatchPatchTest.xctest */,
+				99CB91EF1AF2F2F700D6BFAF /* speedtest */,
+				99CB91F11AF2F2F700D6BFAF /* mode-test */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +242,12 @@
 			mainGroup = 9992DB6C1ADADDE2001B64DF;
 			productRefGroup = 9992DB761ADADDE3001B64DF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 99CB91E41AF2F2F700D6BFAF /* Products */;
+					ProjectRef = 99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9992DB741ADADDE3001B64DF /* clarity */,
@@ -204,6 +255,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		99CB91EB1AF2F2F700D6BFAF /* DiffMatchPatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DiffMatchPatch.framework;
+			remoteRef = 99CB91EA1AF2F2F700D6BFAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		99CB91ED1AF2F2F700D6BFAF /* DiffMatchPatchTest.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DiffMatchPatchTest.xctest;
+			remoteRef = 99CB91EC1AF2F2F700D6BFAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		99CB91EF1AF2F2F700D6BFAF /* speedtest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = speedtest;
+			remoteRef = 99CB91EE1AF2F2F700D6BFAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		99CB91F11AF2F2F700D6BFAF /* mode-test */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "mode-test";
+			remoteRef = 99CB91F01AF2F2F700D6BFAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9992DB731ADADDE3001B64DF /* Resources */ = {
@@ -358,11 +440,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = clarity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "clarity/clarity-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -370,11 +456,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = clarity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "clarity/clarity-Bridging-Header.h";
 			};
 			name = Release;
 		};
