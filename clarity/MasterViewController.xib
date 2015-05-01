@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MasterViewController" customModule="clarity" customModuleProvider="target">
             <connections>
-                <outlet property="diffTextView" destination="NCI-lq-36a" id="14u-rO-0Pp"/>
                 <outlet property="splitView" destination="8WP-tx-L1y" id="khz-KA-eEe"/>
                 <outlet property="tableView" destination="6rp-tY-Bmh" id="Zgf-Hm-yIJ"/>
                 <outlet property="textView" destination="NCI-lq-36a" id="v6y-fT-o6P"/>
