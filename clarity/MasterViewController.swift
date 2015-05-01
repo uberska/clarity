@@ -77,6 +77,11 @@ class MasterViewController: NSViewController {
     func updateDiffView(diffable: Diffable?) {
         if let diffable = diffable {
             diffable.updateView(textView)
+			
+			// Set to a monospace font. This has to be done after text is
+			// in the NSTextView. TODO: figure out how to set a default font instead.
+			let monospaceFont = NSFont(name: "Menlo", size: 16.0)
+			textView.font = monospaceFont
         } else {
             clearDiffView()
         }
