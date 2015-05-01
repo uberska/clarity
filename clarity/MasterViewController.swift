@@ -22,12 +22,7 @@ class MasterViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        diffables += [FileDiffable(onePath: "/git/clarity_test_files/same_one.txt", twoPath: "/git/clarity_test_files/same_two.txt")]
-        diffables += [FileDiffable(onePath: "/git/clarity_test_files/modified_one.txt", twoPath: "/git/clarity_test_files/modified_two.txt")]
-        diffables += [FileDiffable(onePath: "/git/clarity_test_files/removed_one.txt", twoPath: "/git/clarity_test_files/removed_two.txt")]
-        diffables += [FileDiffable(onePath: "/git/clarity_test_files/added_one.txt", twoPath: "/git/clarity_test_files/added_two.txt")]
-        
+		
         clearDiffView()
         
         var arguments: [String] = Array(Process.arguments[1..<Process.arguments.count])
