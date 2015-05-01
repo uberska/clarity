@@ -35,9 +35,7 @@ class FileDiffable : Diffable {
     
     override func updateView(textView: NSTextView) {
         let cmd = "diff \(onePath) \(twoPath)"
-        println(cmd)
         let cmdOutput = run(cmd)
-        println(cmdOutput)
         
         let diffModel = diffTextFromPaths(onePath, twoPath)
         

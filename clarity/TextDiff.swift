@@ -116,7 +116,6 @@ func diffTextStrings(oneName: String, oneContents: String, twoName: String, twoC
 
 
 func parseTextRange(text: String) -> Range<Int> {
-    println("Parsing text range \(text)")
     if text.rangeOfString(",") != nil {
         let delimiterIndex: Range<String.Index> = text.rangeOfString(",")!
         
@@ -138,15 +137,11 @@ func parseTextRange(text: String) -> Range<Int> {
 
 
 func parseTextDiffLine(status: TextDiffModelChunk.Status, delimiter: String, line: String) -> TextDiffModelChunk {
-    println("####")
-    println(line)
-    println(delimiter)
     let index = line.rangeOfString(delimiter)
-    println(index)
+
     let oneRange = parseTextRange(line.substringToIndex(index!.startIndex))
-    println(oneRange)
     let twoRange = parseTextRange(line.substringFromIndex(index!.endIndex))
-    println(twoRange)
+
     return TextDiffModelChunk(status: status, oneRange: oneRange, twoRange: twoRange)
 }
 

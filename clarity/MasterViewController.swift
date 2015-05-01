@@ -46,8 +46,6 @@ class MasterViewController: NSViewController {
                 println("WARNING: Skipping file '\(arguments[index])' since it's an odd file and there is nothing left in the arguments to diff it against.")
             }
         }
-        
-        println(diffables)
     }
     
     override func viewDidAppear() {
