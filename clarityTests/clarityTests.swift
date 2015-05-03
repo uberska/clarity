@@ -126,22 +126,22 @@ class clarityTests: XCTestCase {
         XCTAssert(diffModel.chunks[1].oneRange == Range<Int>(start: 1, end: 3))
         XCTAssert(diffModel.chunks[1].twoRange == Range<Int>(start: 1, end: 3))
     }
-    
-    /*
+	
     func testSameAtBeginningOfAdded() {
-        let diffModel = diffTextStrings("one", "Same\nSame", "two", "Same\nSame\nAdded.")
+        let diffModel = diffTextStrings("one", "Same\n", "two", "Same\nAdded.\n")
         
         XCTAssert(diffModel.chunks.count == 2)
         
         XCTAssert(diffModel.chunks[0].status == TextDiffModelChunk.Status.Same)
-        XCTAssert(diffModel.chunks[0].oneRange == Range<Int>(start: 0, end: 2))
-        XCTAssert(diffModel.chunks[0].twoRange == Range<Int>(start: 0, end: 2))
+        XCTAssert(diffModel.chunks[0].oneRange == Range<Int>(start: 0, end: 1))
+        XCTAssert(diffModel.chunks[0].twoRange == Range<Int>(start: 0, end: 1))
         
         XCTAssert(diffModel.chunks[1].status == TextDiffModelChunk.Status.Added)
-        XCTAssert(diffModel.chunks[1].oneRange == Range<Int>(start: 2, end: 3))
-        XCTAssert(diffModel.chunks[1].twoRange == Range<Int>(start: 2, end: 3))
+        XCTAssert(diffModel.chunks[1].oneRange == Range<Int>(start: 1, end: 2))
+        XCTAssert(diffModel.chunks[1].twoRange == Range<Int>(start: 1, end: 2))
     }
-    
+	
+	/*
     func testSameAtEndOfAdded() {
         let diffModel = diffTextStrings("one", "Same\nSame", "two", "Added.\nSame\nSame")
         
