@@ -1,5 +1,5 @@
 //
-//  Command.swift
+//  Shell.swift
 //  clarity
 //
 //  Created by Scott Douglas on 4/15/15.

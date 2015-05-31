@@ -1,3 +1,6 @@
 [submodule "External/google-diff-match-patch-Objective-C"]
 	path = External/google-diff-match-patch-Objective-C
 	url = git@github.com:JanX2/google-diff-match-patch-Objective-C.git
+[submodule "External/SwiftCLI"]
+	path = External/SwiftCLI
+	url = https://github.com/jakeheis/SwiftCLI.git

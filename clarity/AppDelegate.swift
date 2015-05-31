@@ -8,14 +8,37 @@
 
 import Cocoa
 
+
+public class ClarityHelpCommand: HelpCommand {
+	
+	override public func showHelpOnHFlag() -> Bool  {
+		return true
+	}
+	
+	override public func failOnUnrecognizedOptions() -> Bool  {
+		return false
+	}
+	
+	override public func execute() -> ExecutionResult  {
+		super.execute()
+		exit(0)
+	}
+	
+}
+
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    
-    
+	
     var masterViewController: MasterViewController!
-
+	
+	func applicationWillFinishLaunching(notification: NSNotification) {
+		CLI.setup(name: "clarity", version: "0.1", description: "clarity - diff tool")
+		CLI.registerCustomHelpCommand(ClarityHelpCommand())
+		var result = CLI.go()
+	}
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         masterViewController = MasterViewController(nibName: "MasterViewController", bundle: nil)

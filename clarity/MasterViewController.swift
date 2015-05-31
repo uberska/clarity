@@ -22,7 +22,7 @@ class MasterViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+
         clearDiffView()
         
         var arguments: [String] = Array(Process.arguments[1..<Process.arguments.count])
