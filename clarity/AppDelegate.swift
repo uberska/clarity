@@ -35,6 +35,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var masterViewController: MasterViewController!
 	
 	func applicationWillFinishLaunching(notification: NSNotification) {
+		let standardInput = NSFileHandle.fileHandleWithStandardInput()
+		if (standardInput.isReadable()) {
+			let inputData = standardInput.availableData
+			let inputString: String = NSString(data: inputData, encoding:NSUTF8StringEncoding)! as String
+			println("INPUT START")
+			println(inputString)
+			println("INPUT END")
+		}
+
 		CLI.setup(name: "clarity", version: "0.1", description: "clarity - diff tool")
 		CLI.registerCustomHelpCommand(ClarityHelpCommand())
 		var result = CLI.go()

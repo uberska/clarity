@@ -37,6 +37,7 @@
 		9992DB9C1ADF4456001B64DF /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992DB9B1ADF4456001B64DF /* Shell.swift */; };
 		9992DB9E1ADF4EF2001B64DF /* TextDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992DB9D1ADF4EF2001B64DF /* TextDiff.swift */; };
 		9992DBA01AE1DE5A001B64DF /* DiffColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992DB9F1AE1DE5A001B64DF /* DiffColors.swift */; };
+		99C8DBC61B1AB7830059BF17 /* NSFileHandleExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C8DBC51B1AB7830059BF17 /* NSFileHandleExtension.m */; };
 		99FCAE491AE8602E001150C1 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FCAE481AE8602E001150C1 /* Diffable.swift */; };
 		99FCAE4A1AE8616E001150C1 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FCAE481AE8602E001150C1 /* Diffable.swift */; };
 /* End PBXBuildFile section */
@@ -136,6 +137,8 @@
 		9992DB9B1ADF4456001B64DF /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		9992DB9D1ADF4EF2001B64DF /* TextDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDiff.swift; sourceTree = "<group>"; };
 		9992DB9F1AE1DE5A001B64DF /* DiffColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffColors.swift; sourceTree = "<group>"; };
+		99C8DBC41B1AB1860059BF17 /* NSFileHandleExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileHandleExtension.h; sourceTree = "<group>"; };
+		99C8DBC51B1AB7830059BF17 /* NSFileHandleExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileHandleExtension.m; sourceTree = "<group>"; };
 		99CB91E31AF2F2F700D6BFAF /* DiffMatchPatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffMatchPatch.xcodeproj; path = "External/google-diff-match-patch-Objective-C/DiffMatchPatch.xcodeproj"; sourceTree = "<group>"; };
 		99CB91F31AF2F36C00D6BFAF /* clarity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clarity-Bridging-Header.h"; sourceTree = "<group>"; };
 		99FCAE481AE8602E001150C1 /* Diffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				9992DB7E1ADADDE3001B64DF /* MainMenu.xib */,
 				9992DB781ADADDE3001B64DF /* Supporting Files */,
 				99CB91F31AF2F36C00D6BFAF /* clarity-Bridging-Header.h */,
+				99C8DBC41B1AB1860059BF17 /* NSFileHandleExtension.h */,
+				99C8DBC51B1AB7830059BF17 /* NSFileHandleExtension.m */,
 			);
 			path = clarity;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				9945E4F61AF6E7D300AA967D /* Output.swift in Sources */,
 				99FCAE491AE8602E001150C1 /* Diffable.swift in Sources */,
 				9992DB971ADADDF2001B64DF /* MasterViewController.swift in Sources */,
+				99C8DBC61B1AB7830059BF17 /* NSFileHandleExtension.m in Sources */,
 				9945E4F21AF6E7D300AA967D /* LightweightCommand.swift in Sources */,
 				9945E4EC1AF6E7D300AA967D /* CLI.swift in Sources */,
 				9992DBA01AE1DE5A001B64DF /* DiffColors.swift in Sources */,
@@ -610,6 +616,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = clarity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -626,6 +633,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = clarity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
